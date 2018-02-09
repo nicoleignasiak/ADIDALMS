@@ -1,5 +1,10 @@
 * {
     margin: 0;
+    color: #000000;
+}
+
+body{
+    background-color: #fff;
 }
 
 .buttonStyle {
@@ -20,11 +25,11 @@
     background-color: #ff4d4d;
 }
 
-.header {
+#header {
     float:left;
-    height: 50px;
+    height: 150px;
     width: 100%;
-    background-color: #90909090;
+    background-color: #909090;
 }
 
 h1 {
@@ -34,4 +39,15 @@ h1 {
 }
 ul{
     list-style: none;
+}
+
+#loginform{
+    position:absolute;
+    height:200px;
+    width:200px;
+    left:50%;
+    top:50%;
+    margin-top:100px;
+    margin-left: 100px;
+    
 }
