@@ -16,21 +16,22 @@ ul{
     list-style: none;
 }
 
-.signIn{
-    border: 1px solid black;
-    width: 60px;
-    padding: 10px;
-    margin: 0px;
-}
 
-.signInForm{
+.profileFormCourses{
     padding: 5px;
     width: 80px;
     height: 50px;
     float:right;
 }
 
-.buttonStyle {
+.syllabusFormCourses{
+    padding: 5px;
+    width: 80px;
+    height: 50px;
+    float:left;
+}
+
+.loginButtonIndex {
     border-radius: 4px;
     border: thin solid #000000;
     padding: 5px;
@@ -40,15 +41,15 @@ ul{
     width: 75px;
 }
 
-.buttonStyle:hover {
+.loginButtonIndex:hover {
     cursor: pointer;
 }
 
-.buttonStyle:active{
+.loginButtonIndex:active{
     background-color: #cfebfd;
 }
 
-.buttonSignStyle {
+.profileButtonCourses {
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
@@ -60,11 +61,12 @@ ul{
     float:right;
 }
 
-.buttonSignStyle:hover {
+.profileButtonCourses:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
-.buttonSignStyle:active{
+.profileButtonCourses:active{
     background-color: #cfebfd;
 }
 
@@ -75,13 +77,51 @@ ul{
     background-color: #C0C0C1;
 }
 
-#loginform{
+.classLinksCourses {
+    color: #353535;
+    height: 100px;
+    text-decoration: none;
+}
+
+.classLinksCourses:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.classLinksCourses:active {
+    color: #cfebfd;
+}
+
+.syllabusLinkMany {
+    border-radius: 3px;
+    border: thin solid #353535;
+    padding: 5px;
+    background-color: #C0C0C1;
+    font-weight: bold;
+    width: 80px;
+    height: 50px;
+    color: #353535
+    margin:auto;
+}
+
+.syllabusLinkMany:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.syllabusLinkMany:active {
+    color: #cfebfd;
+}
+
+.logo{
+    float:left;
+}
+#loginFormIndex{
     border-radius: 3px;
     border: thin solid #353535;
     background-color: #C0C0C1;
     font-weight: bold;
     color: #353535;
-
     position: absolute;
     width: 300px;
     height: 120px;
@@ -92,3 +132,4 @@ ul{
     padding-top: 50px;
     
 }
+
