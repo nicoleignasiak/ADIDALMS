@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
   <head>
     <meta charset="utf-8">
     <title>Sign In</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- Connect to CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
-    <div id="fixedheader">
-      <img src="logooo.png" height="100" width="110"/>
+    <div class="header">
+      <!-- ADIDALMS logo at top left -->
+      <img src="logooo.png" alt="ADIDALMS Logo" height="90" width="100"/>
     </div>
     
   	<div id="loginform">
       <section>
 		    <form name="login" action="courses.html" method="get" accept-charset="utf-8">
-          <ul style="list-style:none">
+          <ul>
             <li>
               <label for="usermail">Username</label>
    			 	    <input type="text" id="username" name="username" placeholder="username" required>
             </li>
             <li>
-              <label for="password">Pasasfgdfsword</label>
+              <label for="password">Password</label>
               <input type="password" id="password" name="password" placeholder="password" required>
             </li>
             <li>
-              <input id="buttonStyle" type="submit" value="Login">
+              <input class="buttonStyle" type="submit" value="Login">
             </li>
           </ul>
 		    </form>
