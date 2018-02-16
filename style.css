@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     color: #000000;
 }
@@ -7,11 +7,12 @@ body{
     background-color: #fff;
 }
 
-h1 {
+h1{
     left: 20px;
     font-size: 110%;
     padding-top: 13px;
 }
+
 ul{
     list-style: none;
 }
@@ -21,17 +22,17 @@ ul{
     padding: 5px;
     width: 80px;
     height: 50px;
-    float:right;
+    float: right;
 }
 
 .syllabusFormCourses{
     padding: 5px;
     width: 80px;
     height: 50px;
-    float:left;
+    float: left;
 }
 
-.loginButtonIndex {
+.loginButtonIndex{
     border-radius: 4px;
     border: thin solid #000000;
     padding: 5px;
@@ -41,7 +42,7 @@ ul{
     width: 75px;
 }
 
-.loginButtonIndex:hover {
+.loginButtonIndex:hover{
     cursor: pointer;
 }
 
@@ -49,7 +50,7 @@ ul{
     background-color: #cfebfd;
 }
 
-.profileButtonCourses {
+.profileButtonCourses{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
@@ -61,7 +62,7 @@ ul{
     float:right;
 }
 
-.profileButtonCourses:hover {
+.profileButtonCourses:hover{
     cursor: pointer;
     text-decoration: underline;
 }
@@ -70,29 +71,29 @@ ul{
     background-color: #cfebfd;
 }
 
-.header {
-    float:left;
+.header{
+    float: left;
     height: 100px;
     width: 100%;
     background-color: #C0C0C1;
 }
 
-.classLinksCourses {
+.classLinksCourses{
     color: #353535;
     height: 100px;
     text-decoration: none;
 }
 
-.classLinksCourses:hover {
+.classLinksCourses:hover{
     cursor: pointer;
     text-decoration: underline;
 }
 
-.classLinksCourses:active {
+.classLinksCourses:active{
     color: #cfebfd;
 }
 
-.syllabusLinkMany {
+.syllabusLinkMany{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
@@ -101,21 +102,26 @@ ul{
     width: 80px;
     height: 50px;
     color: #353535
-    margin:auto;
+    margin: auto;
 }
 
-.syllabusLinkMany:hover {
+.syllabusLinkMany:hover{
     cursor: pointer;
     text-decoration: underline;
 }
 
-.syllabusLinkMany:active {
+.syllabusLinkMany:active{
     color: #cfebfd;
 }
 
 .logo{
-    float:left;
+    float: left;
 }
+
+.classList{
+    font-size: 20px;
+}
+
 #loginFormIndex{
     border-radius: 3px;
     border: thin solid #353535;
@@ -130,6 +136,4 @@ ul{
     left: 50%;
     margin: -100px 0 0 -150px;
     padding-top: 50px;
-    
 }
-
