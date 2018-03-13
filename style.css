@@ -1,4 +1,17 @@
-* {
+/******************************************************************************
+* Copyright 2018 Nicole Ignasiak, Gabe Brown, Devin Simoneaux * 
+* Licensed under the Apache License, Version 2.0 (the "License"); * 
+* you may not use this file except in compliance with the License. * 
+* You may obtain a copy of the License at *
+* http://www.apache.org/licenses/LICENSE-2.0 *
+* Unless required by applicable law or agreed to in writing, software * 
+* distributed under the License is distributed on an "AS IS" BASIS, * 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.* 
+* See the License for the specific language governing permissions and * 
+* limitations under the License. * 
+************************************************************************************/
+
+*{
     margin: 0;
     color: #000000;
 }
@@ -7,11 +20,12 @@ body{
     background-color: #fff;
 }
 
-h1 {
+h1{
     left: 20px;
     font-size: 110%;
     padding-top: 13px;
 }
+
 ul{
     list-style: none;
 }
@@ -21,17 +35,17 @@ ul{
     padding: 5px;
     width: 80px;
     height: 50px;
-    float:right;
+    float: right;
 }
 
 .syllabusFormCourses{
     padding: 5px;
     width: 80px;
     height: 50px;
-    float:left;
+    float: left;
 }
 
-.loginButtonIndex {
+.loginButtonIndex{
     border-radius: 4px;
     border: thin solid #000000;
     padding: 5px;
@@ -41,7 +55,7 @@ ul{
     width: 75px;
 }
 
-.loginButtonIndex:hover {
+.loginButtonIndex:hover{
     cursor: pointer;
 }
 
@@ -49,7 +63,7 @@ ul{
     background-color: #cfebfd;
 }
 
-.profileButtonCourses {
+.profileButtonCourses{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
@@ -61,7 +75,7 @@ ul{
     float:right;
 }
 
-.profileButtonCourses:hover {
+.profileButtonCourses:hover{
     cursor: pointer;
     text-decoration: underline;
 }
@@ -70,29 +84,29 @@ ul{
     background-color: #cfebfd;
 }
 
-.header {
-    float:left;
+.header{
+    float: left;
     height: 100px;
     width: 100%;
     background-color: #C0C0C1;
 }
 
-.classLinksCourses {
+.classLinksCourses{
     color: #353535;
     height: 100px;
     text-decoration: none;
 }
 
-.classLinksCourses:hover {
+.classLinksCourses:hover{
     cursor: pointer;
     text-decoration: underline;
 }
 
-.classLinksCourses:active {
+.classLinksCourses:active{
     color: #cfebfd;
 }
 
-.syllabusLinkMany {
+.syllabusLinkMany{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
@@ -100,22 +114,27 @@ ul{
     font-weight: bold;
     width: 80px;
     height: 50px;
-    color: #353535
-    margin:auto;
+    color: #353535;
+    margin: auto;
 }
 
-.syllabusLinkMany:hover {
+.syllabusLinkMany:hover{
     cursor: pointer;
     text-decoration: underline;
 }
 
-.syllabusLinkMany:active {
+.syllabusLinkMany:active{
     color: #cfebfd;
 }
 
 .logo{
-    float:left;
+    float: left;
 }
+
+.classList{
+    font-size: 20px;
+}
+
 #loginFormIndex{
     border-radius: 3px;
     border: thin solid #353535;
@@ -130,6 +149,4 @@ ul{
     left: 50%;
     margin: -100px 0 0 -150px;
     padding-top: 50px;
-    
 }
-
