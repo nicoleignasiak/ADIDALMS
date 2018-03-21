@@ -87,6 +87,30 @@ ul{
     background-color: #cfebfd;
 }
 
+.addUpdateButton{
+    border-radius: 3px;
+    border: thin solid #353535;
+    padding: 1px;
+    background-color: #C0C0C1;
+    font-weight: bold;
+    width: 80px;
+    height: 40px;
+    color: #353535;
+    margin: auto;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.addUpdateButton:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.addUpdateButton:active{
+    color: #cfebfd;
+}
+
 .header{
     float: left;
     height: 120px;
@@ -141,7 +165,7 @@ ul{
 }
 
 .signIn{
-    margin: 5px, 0px, 8px;
+    margin: 5px 0px 8px;
     font-size: 146%;
 }
 .mainAction{
@@ -182,5 +206,37 @@ ul{
     top: 50%;
     left: 50%;
     margin: -100px 0 0 -150px;
+    padding-top: 10px;
+}
+
+.submitUpdate{
+    border-radius: 3px;
+    border: thin solid #353535;
+    box-shadow: 0 3px 12px #5C666B;
+    background-color: #C0C0C1;
+    font-weight: bold;
+    color: #353535;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    padding-top: 10px;
+}
+
+.addUpdate{
+    border-radius: 3px;
+    border: thin solid #353535;
+    box-shadow: 0 3px 12px #5C666B;
+    background-color: #C0C0C1;
+    font-weight: bold;
+    color: #353535;
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    z-index: 15;
+    margin: 180px 0 0 50px;
     padding-top: 10px;
 }
