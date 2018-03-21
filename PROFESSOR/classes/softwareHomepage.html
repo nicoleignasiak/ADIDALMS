@@ -18,6 +18,25 @@
         <meta charset="utf-8">
         <title>Courses</title>
         <link rel="stylesheet" type="text/css" href="../../style.css">
+
+
+        <script>
+            var btn = document.querySelector('input');
+var txt = document.querySelector('p');
+
+btn.addEventListener('click', updateBtn);
+
+function updateBtn() {
+  if (btn.value === 'Start machine') {
+    btn.value = 'Stop machine';
+    txt.textContent = 'The machine has started!';
+  } else {
+    btn.value = 'Start machine';
+    txt.textContent = 'The machine is stopped.';
+  }
+}
+</script>
+
     </head>
 
     <body>
@@ -30,6 +49,26 @@
 
             <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
                 <input class="logoutButtonCourses" type="submit" value="Logout">
+            </form>
+        </div>
+
+        <div class="addUpdate">
+            <p>Course Updates</p>
+            <hr>
+
+
+            <form class="syllabusFormCourses" name="addUpdate" action="submit" method="get" accept-charset="utf-8">
+                <input class="addUpdateButton" type="submit" value="Add update">
+            </form>
+        </div>
+
+        <div class="submitUpdate">
+            <form action="/action_page.php" method="post">
+                <p>New update:</p>
+                <hr>
+                <br>
+                <input type="text" name="update" style="margin-left: 10px; height: 75px; width: 250px"> 
+                <input type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;">
             </form>
         </div>
     
