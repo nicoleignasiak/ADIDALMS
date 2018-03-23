@@ -1,0 +1,67 @@
+<!--/******************************************************************************
+* Copyright 2018 Nicole Ignasiak, Gabe Brown, Devin Simoneaux * 
+* Licensed under the Apache License, Version 2.0 (the "License"); * 
+* you may not use this file except in compliance with the License. * 
+* You may obtain a copy of the License at *
+* http://www.apache.org/licenses/LICENSE-2.0 *
+* Unless required by applicable law or agreed to in writing, software * 
+* distributed under the License is distributed on an "AS IS" BASIS, * 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.* 
+* See the License for the specific language governing permissions and * 
+* limitations under the License. * 
+************************************************************************************/-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Courses</title>
+        <link rel="stylesheet" type="text/css" href="../../../style.css">
+<script type="text/javascript" src="pdf.js"></script>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <img class="logo" src="../../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+
+            <form class="syllabusFormCourses" name="syllabus" action="tools/syllabus/class1Syllabus.html" method="get" accept-charset="utf-8">
+            </form>
+
+            <form class="logoutFormCourses" name="signOut" action="../../../index.html" method="get" accept-charset="utf-8">
+                <input class="logoutButtonCourses" type="submit" value="Logout">
+            </form>
+        </div>
+
+        <p>Network Syllabus</p>
+        <div>
+
+<input id="upload" type="file" />
+<input id="filename" type="submit" value = "No Syllabus"/>
+<p id="successSyl"></p>
+</div>
+<script>
+    document.getElementById('upload').onchange = uploadOnChange;
+    document.getElementById('filename').onclick = function(){showPic()};
+function uploadOnChange() {
+    var filename = this.value;
+    var lastIndex = filename.lastIndexOf("\\");
+    if (lastIndex >= 0) {
+        filename = filename.substring(lastIndex + 1);
+    }
+    document.getElementById('filename').value = "Upload " + filename;
+}
+
+function showPic(){
+    var filename = this.value;
+    var lastIndex = filename.lastIndexOf("\\");
+    if (lastIndex >= 0) {
+        filename = filename.substring(lastIndex + 1);
+    }
+    document.getElementById('filename').value = "No syllabus";
+ document.getElementById('successSyl').value = filename + " was uploaded successfully.";
+}
+</script>
+    </body>
+</html>
+
