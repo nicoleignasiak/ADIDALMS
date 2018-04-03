@@ -31,20 +31,24 @@
           var professor = false;
           if(document.getElementById("username").value == "student" && document.getElementById("password").value == "pass")
           {
-            student = true; 
+            var student = true; 
           }
           else if
           (document.getElementById("username").value == "professor" && document.getElementById("password").value == "pass")
           {
-            professor = true; 
+            var professor = true; 
+          }
+          else
+          {
+          	var professor = false;
+          	var student = false;
           }
           
           if(student==true)
           {
             location.href="student/coursesHomepage.html";
           } 
-          else if
-            (professor==true)
+          else if(professor==true)
           {
             location.href="professor/coursesHomepage.html";
           }
