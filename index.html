@@ -25,37 +25,24 @@
     <!-- Scripting for username and password validation -->
     <script>
       
-      function validate()
+      function Boolean validate()
         {
-          var student = false;
-          var professor = false;
           if(document.getElementById("username").value == "student" && document.getElementById("password").value == "pass")
           {
-            var student = true; 
+            location.href="student/coursesHomepage.html";
+            return true;
           }
           else if
           (document.getElementById("username").value == "professor" && document.getElementById("password").value == "pass")
           {
-            var professor = true; 
+            location.href="professor/coursesHomepage.html";
+            return true; 
           }
           else
           {
-          	var professor = false;
-          	var student = false;
-          }
-          
-          if(student==true)
-          {
-            location.href="student/coursesHomepage.html";
-          } 
-          else if(professor==true)
-          {
-            location.href="professor/coursesHomepage.html";
-          }
-          else 
-          {
-            alert( "Username and/or Password are incorrect. Please enter in a valid Username and Password.");
+          	alert( "Username and/or Password are incorrect. Please enter in a valid Username and Password.");
             location.href="index.html";
+            return false;
           }
         }
     </script>
