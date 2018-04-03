@@ -17,24 +17,7 @@
         <meta charset="utf-8">
         <title>Courses</title>
         <link rel="stylesheet" type="text/css" href="../../../style.css">
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-        <script type="text/javascript">
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-                    .width()
-                    .height();
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-        </script>
+<script type="text/javascript" src="pdf.js"></script>
 
     </head>
 
@@ -43,7 +26,6 @@
             <img class="logo" src="../../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
 
             <form class="syllabusFormCourses" name="syllabus" action="tools/syllabus/class1Syllabus.html" method="get" accept-charset="utf-8">
-                <input class="syllabusLinkMany" type="submit" value="Syllabus">
             </form>
 
             <form class="logoutFormCourses" name="signOut" action="../../../index.html" method="get" accept-charset="utf-8">
@@ -51,19 +33,37 @@
             </form>
         </div>
 
+        <p>Software Syllabus</p>
         <div>
-             <form class="profileFormCourses" name="signIn" action="index.html" method="get" accept-charset="utf-8">
-                <input class="profileButtonCourses" type="submit" value="Upload Syllabus">
-            </form>
 
+<input id="upload" type="file" />
+<input id="filename" type="submit" value = "No Syllabus"/>
+<p id="successSyl"></p>
+</div>
+<script>
+    document.getElementById('upload').onchange = uploadOnChange;
+    document.getElementById('filename').onclick = function(){showPic()};
+function uploadOnChange() {
+    var filename = this.value;
+    var lastIndex = filename.lastIndexOf("\\");
+    if (lastIndex >= 0) {
+        filename = filename.substring(lastIndex + 1);
+    }
+    document.getElementById('filename').value = "Upload " + filename;
+}
 
-
-        </div>
-        <div>
-            <input type='file' onchange="readURL(this);" />
-
-            <img id="blah" src="#" alt="your image" />
-        </div>
-    
+function showPic(){
+    var filename = this.value;
+    var lastIndex = filename.lastIndexOf("\\");
+    if (lastIndex >= 0) {
+        filename = filename.substring(lastIndex + 1);
+    }
+    document.getElementById('filename').value = "No syllabus";
+ document.getElementById('successSyl').value = filename + " was uploaded successfully.";
+}
+</script>
     </body>
 </html>
+
+
+
