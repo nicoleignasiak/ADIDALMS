@@ -25,7 +25,7 @@
     <!-- Scripting for username and password validation -->
     <script>
       
-      function Boolean validate()
+      function validate()
         {
           var student = false;
           var professor = false;
@@ -42,18 +42,15 @@
           if(student==true)
           {
             location.href="student/coursesHomepage.html";
-            return true;
           }
           else if(professor==true)
           {
             location.href="professor/coursesHomepage.html";
-            return true;
           }
           else 
           {
             alert( "Username and/or Password are incorrect. Please enter in a valid Username and Password.");
             location.href="index.html";
-            return false;
           }
         }
     </script>
