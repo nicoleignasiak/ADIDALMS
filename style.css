@@ -22,7 +22,7 @@ body{
 
 h1{
     left: 20px;
-    font-size: 110%;
+    font-size: 120%;
     padding-top: 13px;
 }
 
@@ -63,6 +63,29 @@ ul{
 }
 
 .loginButtonIndex:active{
+    background-color: #cfebfd;
+}
+
+.logoutButtonCourses{
+    border-radius: 4px;
+    border: thin solid #000000;
+    padding: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #000000;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.logoutButtonCourses:hover{
+    cursor: pointer;
+}
+
+.logoutButtonCourses:active{
     background-color: #cfebfd;
 }
 
@@ -116,6 +139,14 @@ ul{
     height: 120px;
     width: 100%;
     background-color: #C0C0C1;
+    position: relative;
+}
+
+.header h1{
+    position: absolute;
+    bottom: 3px;
+    margin-left: 100px;
+    font-size: 150%;
 }
 
 .classLinksCourses{
