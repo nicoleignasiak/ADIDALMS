@@ -37,12 +37,7 @@ ul{
     float: right;
 }
 
-.addUpdate{
-    padding: 5px;
-    width: 80px;
-    height: 50px;
-    float: left;
-}
+
 
 .loginButtonIndex{
     border-radius: 4px;
@@ -112,14 +107,22 @@ ul{
     background-color: #cfebfd;
 }
 
+.addUpdate{
+    padding: 7px;
+    width: 80px;
+    height: 50px;
+    float: left;
+    margin-left:40px;
+}
+
 .addUpdateButton{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 1px;
     background-color: #C0C0C1;
     font-weight: bold;
-    width: 80px;
-    height: 40px;
+    width: 70px;
+    height: 30px;
     color: #353535;
     margin: auto;
     position: absolute;
@@ -130,11 +133,9 @@ ul{
 .addUpdateButton:hover{
     cursor: pointer;
     text-decoration: underline;
-}
-
-.addUpdateButton:active{
     color: #cfebfd;
 }
+
 
 .studentName{
     border-radius: 4px;
@@ -231,6 +232,7 @@ ul{
     height: 50px;
     color: #353535;
     margin: 20px;
+    margin-left: 40px;
 }
 
 .syllabus:hover{
@@ -307,6 +309,7 @@ ul{
     left: 50%;
     margin: -100px 0 0 -150px;
     padding-top: 10px;
+    visibility: hidden;
 }
 
 .addUpdate{

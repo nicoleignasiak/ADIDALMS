@@ -20,23 +20,22 @@
     </head>
 
     <body>
+
          <script>
-            var btn = document.querySelector('input');
-var txt = document.querySelector('p');
 
-btn.addEventListener('click', updateBtn);
 
-function updateBtn() {
-  if (btn.value === 'Start machine') {
-    btn.value = 'Stop machine';
-    txt.textContent = 'The machine has started!';
-  } else {
-    btn.value = 'Start machine';
-    txt.textContent = 'The machine is stopped.';
-  }
-}
+            function showAddUpdate() {
+                var x = document.getElementById("submitUpdate");
+                x.style.display="block";            
+            }
+
+            function hideAddUpdate() {
+                var x = document.getElementById("submitUpdate");
+                x.style.display="none"; 
+            }
 </script>
 
+<<<<<<< HEAD
 <script language="javascript">
 
   function DisableBackButton()
@@ -45,50 +44,66 @@ function updateBtn() {
     }
 </script>
 
-        <div class="header-wrapper">
-        <div class="headerClass">
-            <!-- ADIDALMS logo at top left -->
-            <img class="logo" src="../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+=======
 
+        
+>>>>>>> 39ab242b688808deb7fa9420146478f6ae0a13c4
+        <div class="header-wrapper">
+            <div class="headerClass">
+                <!-- ADIDALMS logo at top left -->
+                <img class="logo" src="../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+
+<<<<<<< HEAD
             <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
                 <input class="logoutButtonCourses" type="submit" value="Logout">
                 <script language="javascript">DisableBackButton();</script>
             </form>
+=======
+                <form class="logoutFormCourses" name="signOut" action="../index.html" method="get" accept-charset="utf-8">
+                    <input class="logoutButtonCourses" type="submit" value="Logout">
+                </form>
+>>>>>>> 39ab242b688808deb7fa9420146478f6ae0a13c4
 
-            <input class="studentName" type="submit" value="Professor 1"></input>
+                <input class="studentName" type="submit" value="Professor 1"></input>
 
-            <h1>Indiana Wesleyan University</h1>
-            <h2>Intro to Software Engineering</h2>
-        </div>
+                <h1>Indiana Wesleyan University</h1>
+                <h2>Intro to Software Engineering</h2>
+            </div>
         </div> 
 
         <div>
-        <form class="syllabusFormCourses" name="syllabus" action="tools/softwareSyllabus.html" method="get" accept-charset="utf-8">
+            <form class="syllabusFormCourses" name="syllabus" action="tools/softwareSyllabus.html" method="get" accept-charset="utf-8">
                 <input class="syllabus" type="submit" value="Syllabus">
-        </form> 
+            </form> 
         </div> 
 
+        <hr>
 
 
         <div>
-        <div class="addUpdate">
-            <p>Course Updates</p>
-            <hr>
-
-            <form class="addUpdate" name="addUpdate" action="submit" method="get" accept-charset="utf-8">
-                <input class="addUpdateButton" type="submit" value="Add update">
-            </form>
-        </div>
-
-        <div class="submitUpdate">
-            <form action="/action_page.php" method="post">
-                <p>New update:</p>
+            <div class="addUpdate">
+                <p>Course Updates</p>
                 <hr>
-                <br>
-                <input type="text" name="update" style="margin-left: 10px; height: 75px; width: 250px"> 
-                <input type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;">
-            </form>
+
+                <div id="update"></div>
+
+                <form class="addUpdates" name="addUpdate" action="submit" method="get" accept-charset="utf-8" onclick="showAddUpdate()">
+                    <input class="addUpdateButton" type="submit" value="Add update" onclick="showAddUpdate()">
+                </form>
+            </div>
+
+
+
+            <div class="submitUpdate">
+                <form action="/action_page.php" method="post">
+                    <p>New update:</p>
+                    <hr>
+                    <br>
+                
+                    <input id="profUpdate" type="text" name="update" style="margin-left: 10px; height: 60px; width: 270px"> 
+                    <input class="addUpdateButton" type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;" onclick="hideAddUpdate()">
+                </form>
+            </div>
         </div>
-    </div>
     </body>
 </html>
