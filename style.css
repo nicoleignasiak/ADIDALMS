@@ -17,7 +17,7 @@
 }
 
 body{
-    background-color: #fff;
+    background-color: #F2F2F2;
 }
 
 h1{
@@ -37,7 +37,7 @@ ul{
     float: right;
 }
 
-.syllabusFormCourses{
+.addUpdate{
     padding: 5px;
     width: 80px;
     height: 50px;
@@ -47,7 +47,7 @@ ul{
 .loginButtonIndex{
     border-radius: 4px;
     border: thin solid #000000;
-    padding: 5px;
+    padding: 4px;
     background-color: #ffffff;
     font-weight: bold;
     color: #000000;
@@ -83,6 +83,8 @@ ul{
 
 .logoutButtonCourses:hover{
     cursor: pointer;
+    color: #cfebfd;
+    text-decoration: underline;
 }
 
 .logoutButtonCourses:active{
@@ -134,21 +136,78 @@ ul{
     color: #cfebfd;
 }
 
+.studentName{
+    border-radius: 4px;
+    border: thin solid #000000;
+    padding: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #000000;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+
+}
+
+.coursesList{
+    background-color: #C0C0C1;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.coursesList h1{
+    bottom: 7px;
+    margin: 10px;
+    font-size: 110%;
+}
+
 .header{
     float: left;
     height: 120px;
     width: 100%;
     background-color: #C0C0C1;
     position: relative;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+}
+
+.headerClass{
+    float: left;
+    height: 120px;
+    width: 100%;
+    background-color: #C0C0C1;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.header-wrapper{
+    height:100%;
 }
 
 .header h1{
     position: absolute;
-    bottom: 3px;
+    bottom: 7px;
     margin-left: 100px;
     font-size: 150%;
 }
+
+.headerClass h1{
+    position: absolute;
+    top: 7px;
+    margin-left: 100px;
+    font-size: 150%;
+}
+
+.headerClass h2{
+    position: absolute;
+    bottom: 7px;
+    margin-left: 120px;
+    font-size: 110%;
+}
+
 
 .classLinksCourses{
     color: #353535;
@@ -159,13 +218,10 @@ ul{
 .classLinksCourses:hover{
     cursor: pointer;
     text-decoration: underline;
-}
-
-.classLinksCourses:active{
     color: #cfebfd;
 }
 
-.syllabusLinkMany{
+.syllabus{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
@@ -174,15 +230,12 @@ ul{
     width: 80px;
     height: 50px;
     color: #353535;
-    margin: auto;
+    margin: 20px;
 }
 
-.syllabusLinkMany:hover{
+.syllabus:hover{
     cursor: pointer;
     text-decoration: underline;
-}
-
-.syllabusLinkMany:active{
     color: #cfebfd;
 }
 
