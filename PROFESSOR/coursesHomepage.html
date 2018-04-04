@@ -21,6 +21,15 @@
     </head>
 
     <body>
+    
+    <script language="javascript">
+    
+        function DisableBackButton()
+            {
+                history.forward();
+            }
+    </script>
+    
         <div class="header-wrapper">
         <div class="header">
             <!-- ADIDALMS logo at top left -->
@@ -28,6 +37,7 @@
 
             <form class="logoutFormCourses" name="signOut" action="../index.html" method="get" accept-charset="utf-8">
                 <input class="logoutButtonCourses" type="submit" value="Logout">
+                <script language="javascript">DisableBackButton();</script>
             </form>
 
             <input class="studentName" type="submit" value="Professor 1"></input>
