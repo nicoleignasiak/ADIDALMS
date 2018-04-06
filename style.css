@@ -37,7 +37,9 @@ ul{
     float: right;
 }
 
-
+.spacing{
+    margin-left: 20px;
+}
 
 .loginButtonIndex{
     border-radius: 4px;
@@ -135,7 +137,6 @@ ul{
     text-decoration: underline;
     color: #cfebfd;
 }
-
 
 .studentName{
     border-radius: 4px;

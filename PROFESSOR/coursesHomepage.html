@@ -11,7 +11,6 @@
 * limitations under the License. * 
 *******************************************************************************/-->
 
-
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -21,41 +20,41 @@
     </head>
 
     <body>
-    
-    <script language="javascript">
-    
-        function DisableBackButton()
-            {
-                history.forward();
-            }
-    </script>
+        <script language="javascript">
+            function DisableBackButton()
+                {
+                    history.forward();
+                }
+        </script>
     
         <div class="header-wrapper">
-        <div class="header">
-            <!-- ADIDALMS logo at top left -->
-            <img class="logo" src="../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+            <div class="headerClass">
+                <!-- ADIDALMS logo at top left -->
+                <img class="logo" src="../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
 
-            <form class="logoutFormCourses" name="signOut" action="../index.html" method="get" accept-charset="utf-8">
-                <input class="logoutButtonCourses" type="submit" value="Logout">
-                <script language="javascript">DisableBackButton();</script>
-            </form>
+                <!-- logout button -->
+                <form class="logoutFormCourses" name="signOut" action="../index.html" method="get" accept-charset="utf-8">
+                  <input class="logoutButtonCourses" type="submit" value="Logout">
+                  <script language="javascript">DisableBackButton();</script>
+                </form>
 
-            <input class="studentName" type="submit" value="Professor 1"></input>
+                <input class="studentName" type="submit" value="Professor 1"></input>
 
-            <h1>Indiana Wesleyan University</h1>
-        </div>
-        </div>
+                <h1>Indiana Wesleyan University</h1>
+                <h2>Courses Homepage: Professor</h2>
+            </div>
+        </div> 
+
         <hr>
 
         <!-- List of class names-->
         <div class="coursesList">
             <h1>Professor's Course List</h1>
-        <ul>
-            <li><a class="classLinksCourses" href="classes/softwareHomepage.html"/>Intro to Software Engineering</li>
-            <li><a class="classLinksCourses" href="classes/networkHomepage.html"/>Computer Network Fundamentals</li>
-            <li><a class="classLinksCourses" href="classes/databaseHomepage.html"/>Database Programming</li>
-        </ul>
+            <ul>
+                <li><a class="classLinksCourses" href="classes/softwareHomepage.html"/>Intro to Software Engineering</li>
+                <li><a class="classLinksCourses" href="classes/networkHomepage.html"/>Computer Network Fundamentals</li>
+                <li><a class="classLinksCourses" href="classes/databaseHomepage.html"/>Database Programming</li>
+            </ul>
         </div>
-
     </body>
 </html>

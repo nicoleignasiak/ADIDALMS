@@ -22,46 +22,49 @@
     </head>
 
     <body>
-        <div class="header">
-            <img class="logo" src="../../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+        <script language="javascript">
+            function DisableBackButton()
+            {
+                history.forward();
+            }
+        </script>
 
-            <form class="syllabusFormCourses" name="syllabus" action="tools/syllabus/class1Syllabus.html" method="get" accept-charset="utf-8">
-            </form>
+        <div class="header-wrapper">
+            <div class="headerClass">
+                <!-- ADIDALMS logo at top left -->
+                <img class="logo" src="../../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
 
-            <form class="logoutFormCourses" name="signOut" action="../../../index.html" method="get" accept-charset="utf-8">
-                <input class="logoutButtonCourses" type="submit" value="Logout">
-            </form>
+                <!-- logout button -->
+                <form class="logoutFormCourses" name="signOut" action="../../../index.html" method="get" accept-charset="utf-8">
+                  <input class="logoutButtonCourses" type="submit" value="Logout">
+                  <script language="javascript">DisableBackButton();</script>
+                </form>
+
+                <input class="studentName" type="submit" value="Professor 1"></input>
+
+                <h1>Indiana Wesleyan University</h1>
+                <h2>Database Programming: Upload Syllabus</h2>
+            </div>
+        </div> 
+
+        <div class="spacing">
+            <input id="upload" type="file" />
+            <input id="filename" type="submit" value = "No Syllabus"/>
+            <p id="successSyl"></p>
         </div>
 
-        <p>Database Syllabus</p>
-        <div>
-
-<input id="upload" type="file" />
-<input id="filename" type="submit" value = "No Syllabus"/>
-<p id="successSyl"></p>
-</div>
-<script>
-    document.getElementById('upload').onchange = uploadOnChange;
-    document.getElementById('filename').onclick = function(){showPic()};
-function uploadOnChange() {
-    var filename = this.value;
-    var lastIndex = filename.lastIndexOf("\\");
-    if (lastIndex >= 0) {
-        filename = filename.substring(lastIndex + 1);
-    }
-    document.getElementById('filename').value = "Upload " + filename;
-}
-
-function showPic(){
-    var filename = this.value;
-    var lastIndex = filename.lastIndexOf("\\");
-    if (lastIndex >= 0) {
-        filename = filename.substring(lastIndex + 1);
-    }
-    document.getElementById('filename').value = "No syllabus";
- document.getElementById('successSyl').value = filename + " was uploaded successfully.";
-}
-</script>
+        <script>
+            document.getElementById('upload').onchange = uploadOnChange;
+            document.getElementById('filename').onclick = function(){showPic()};
+            
+            function uploadOnChange() {
+                var filename = this.value;
+                var lastIndex = filename.lastIndexOf("\\");
+                if (lastIndex >= 0) {
+                    filename = filename.substring(lastIndex + 1);
+                }
+                document.getElementById('filename').value = "Upload " + filename;
+            }
+        </script>
     </body>
 </html>
-

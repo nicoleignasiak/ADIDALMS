@@ -11,48 +11,59 @@
 * limitations under the License. * 
 ************************************************************************************/-->
 
-
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
         <title>Courses</title>
-        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <link rel="stylesheet" type="text/css" href="../../../style.css">
+        <script type="text/javascript" src="pdf.js"></script>
     </head>
 
-        <body>
+    <body>
         <script language="javascript">
             function DisableBackButton()
-                {
-                    history.forward();
-                }
+            {
+                history.forward();
+            }
         </script>
-    
+
         <div class="header-wrapper">
             <div class="headerClass">
                 <!-- ADIDALMS logo at top left -->
-                <img class="logo" src="../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+                <img class="logo" src="../../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
 
                 <!-- logout button -->
-                <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
+                <form class="logoutFormCourses" name="signOut" action="../../../index.html" method="get" accept-charset="utf-8">
                   <input class="logoutButtonCourses" type="submit" value="Logout">
                   <script language="javascript">DisableBackButton();</script>
                 </form>
 
-                <input class="studentName" type="submit" value="Student 1"></input>
+                <input class="studentName" type="submit" value="Professor 1"></input>
 
                 <h1>Indiana Wesleyan University</h1>
-                <h2>Computer Networking</h2>
+                <h2>Computer Networking: Upload Syllabus</h2>
             </div>
-        </div>
-
-        <!-- syllabus -->
-        <div>
-            <form class="syllabusFormCourses" name="syllabus" action="tools/networkSyllabus.pdf" method="get" accept-charset="utf-8">
-                <input class="syllabus" type="submit" value="Syllabus">
-            </form>
         </div> 
 
-        <hr>
+        <div class="spacing">
+            <input id="upload" type="file" />
+            <input id="filename" type="submit" value = "No Syllabus"/>
+            <p id="successSyl"></p>
+        </div>
+
+        <script>
+            document.getElementById('upload').onchange = uploadOnChange;
+            document.getElementById('filename').onclick = function(){showPic()};
+            
+            function uploadOnChange() {
+                var filename = this.value;
+                var lastIndex = filename.lastIndexOf("\\");
+                if (lastIndex >= 0) {
+                    filename = filename.substring(lastIndex + 1);
+                }
+                document.getElementById('filename').value = "Upload " + filename;
+            }
+        </script>
     </body>
 </html>

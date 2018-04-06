@@ -11,7 +11,6 @@
 * limitations under the License. * 
 ************************************************************************************/-->
 
-
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -21,28 +20,72 @@
     </head>
 
     <body>
-    
-    <script language="javascript">
-    
-        function DisableBackButton()
+        <script language="javascript">
+            function DisableBackButton()
             {
                 history.forward();
             }
-    </script>
-    
-        <div class="header">
-            <img class="logo" src="../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+        </script>
 
+        <div class="header-wrapper">
+            <div class="headerClass">
+                <!-- ADIDALMS logo at top left -->
+                <img class="logo" src="../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
+
+                <!-- logout button -->
+                <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
+                  <input class="logoutButtonCourses" type="submit" value="Logout">
+                  <script language="javascript">DisableBackButton();</script>
+                </form>
+
+                <input class="studentName" type="submit" value="Professor 1"></input>
+
+                <h1>Indiana Wesleyan University</h1>
+                <h2>Database Programming</h2>
+            </div>
+        </div> 
+
+        <!-- syllabus -->
+        <div>
             <form class="syllabusFormCourses" name="syllabus" action="tools/databaseSyllabus.html" method="get" accept-charset="utf-8">
-                <input class="syllabusLinkMany" type="submit" value="Syllabus">
-            </form>
+                <input class="syllabus" type="submit" value="Syllabus">
+            </form> 
+        </div> 
 
-            <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
-                <input class="logoutButtonCourses" type="submit" value="Logout">                
-                <script language="javascript">DisableBackButton();</script>
-            </form>
-            
-            <p>Database Homepage</p>
+        <hr>
+
+        <div>
+            <div class="addUpdate">
+                <p>Course Updates</p>
+                <hr>
+                <div id="update"></div>
+
+                <!-- add update button, will show a pop up -->
+                <button type="button" class="addUpdateButton" id="addUpdateButton" onclick="show()">Add Update</button>
+            </div>
+
+            <div class="submitUpdate" style="display: none" id="submitUpdate">
+                <p>New update:</p>
+                <hr>
+                <br>
+        
+                <!-- will submit the update -->
+                <input id="profUpdate" type="text" name="update" style="margin-left: 10px; height: 60px; width: 270px"> 
+                <input class="addUpdateButton" type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;" onclick="hide()">
+            </div>
         </div>
+
+        <!-- script for updates -->
+        <script language="javascript">
+            function show() {
+                document.getElementById('submitUpdate').style.display = "block";
+            }
+
+            function hide() {
+                document.getElementById('submitUpdate').style.display = "none";
+                var newUpdate = document.getElementById('profUpdate').value;
+                document.getElementById('update').innerHTML = newUpdate;
+            }
+        </script>
     </body>
 </html>

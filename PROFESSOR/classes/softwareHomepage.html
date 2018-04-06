@@ -20,23 +20,19 @@
     </head>
 
     <body>
-
-
-<script language="javascript">
-
-  function DisableBackButton()
-    {
-      history.forward();
-    }
-</script>
-
+        <script language="javascript">
+            function DisableBackButton()
+            {
+                history.forward();
+            }
+        </script>
 
         <div class="header-wrapper">
             <div class="headerClass">
                 <!-- ADIDALMS logo at top left -->
                 <img class="logo" src="../../logo.png" alt="ADIDALMS Logo" height="90" width="100"/>
 
-
+                <!-- logout button -->
                 <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
                   <input class="logoutButtonCourses" type="submit" value="Logout">
                   <script language="javascript">DisableBackButton();</script>
@@ -49,6 +45,7 @@
             </div>
         </div> 
 
+        <!-- syllabus -->
         <div>
             <form class="syllabusFormCourses" name="syllabus" action="tools/softwareSyllabus.html" method="get" accept-charset="utf-8">
                 <input class="syllabus" type="submit" value="Syllabus">
@@ -57,39 +54,37 @@
 
         <hr>
 
-
         <div>
             <div class="addUpdate">
                 <p>Course Updates</p>
                 <hr>
-
                 <div id="update"></div>
 
+                <!-- add update button, will show a pop up -->
                 <button type="button" class="addUpdateButton" id="addUpdateButton" onclick="show()">Add Update</button>
             </div>
 
-
             <div class="submitUpdate" style="display: none" id="submitUpdate">
-
-                    <p>New update:</p>
-                    <hr>
-                    <br>
+                <p>New update:</p>
+                <hr>
+                <br>
         
-                    <input id="profUpdate" type="text" name="update" style="margin-left: 10px; height: 60px; width: 270px"> 
-                    <input class="addUpdateButton" type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;" onclick="hide()">
+                <!-- will submit the update -->
+                <input id="profUpdate" type="text" name="update" style="margin-left: 10px; height: 60px; width: 270px"> 
+                <input class="addUpdateButton" type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;" onclick="hide()">
             </div>
         </div>
 
+        <!-- script for updates -->
         <script language="javascript">
-
             function show() {
                 document.getElementById('submitUpdate').style.display = "block";
             }
 
             function hide() {
                 document.getElementById('submitUpdate').style.display = "none";
-                var update = document.getElementById('profUpdate');
-                document.getElementById('update').innerHTML = update;
+                var newUpdate = document.getElementById('profUpdate').value;
+                document.getElementById('update').innerHTML = newUpdate;
             }
         </script>
     </body>
