@@ -242,6 +242,25 @@ ul{
     color: #cfebfd;
 }
 
+.schedule{
+    border-radius: 3px;
+    border: thin solid #353535;
+    padding: 5px;
+    background-color: #C0C0C1;
+    font-weight: bold;
+    width: 80px;
+    height: 50px;
+    color: #353535;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.schedule:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #cfebfd;
+}
+
 .logo{
     margin-top: 10px;
     margin-left: 10px;
