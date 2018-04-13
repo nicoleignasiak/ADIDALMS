@@ -20,8 +20,16 @@
     <!-- Connect to CSS style sheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
+  
+  <script language="javascript">
+  
+    function DisableBackButton()
+      {
+        history.forward();
+      }
+  </script>
 
-  <body>
+  <body onload="DisableBackButton()">
   
     <!-- Scripting for username and password validation -->    
     <script>
