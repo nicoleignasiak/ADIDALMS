@@ -88,6 +88,31 @@ ul{
     background-color: #cfebfd;
 }
 
+.backButtonCourses{
+    border-radius: 4px;
+    border: thin solid #000000;
+    padding: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #000000;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.backButtonCourses:hover{
+    cursor: pointer;
+    color: #cfebfd;
+    text-decoration: underline;
+}
+
+.backButtonCourses:active{
+    background-color: #cfebfd;
+}
+
 .profileButtonCourses{
     border-radius: 3px;
     border: thin solid #353535;
