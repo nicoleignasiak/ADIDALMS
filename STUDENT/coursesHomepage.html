@@ -44,12 +44,86 @@
         <div class="coursesList">
             <h1>Students's Course List</h1>
             <ul>
-                <li><a class="classLinksCourses" href="classes/softwareHomepage.html">Intro to Software Engineering</li>
-                <li><a class="classLinksCourses" href="classes/accountingHomepage.html">Accounting Principles II</li>
-                <li><a class="classLinksCourses" href="classes/networkHomepage.html">Computer Network Fundamentals</li>
-                <li><a class="classLinksCourses" href="classes/databaseHomepage.html">Database Programming</li>
-                <li><a class="classLinksCourses" href="classes/literatureHomepage.html">Humanities World Literature</li>
+                <li><a class="classLinksCourses" href="classes/softwareHomepage.html">Intro to Software Engineering</a></li>
+                <li><a class="classLinksCourses" href="classes/accountingHomepage.html">Accounting Principles II</a></li>
+                <li><a class="classLinksCourses" href="classes/networkHomepage.html">Computer Network Fundamentals</a></li>
+                <li><a class="classLinksCourses" href="classes/literatureHomepage.html">Humanities World Literature</a></li>
+                <li><a class="classLinksCourses" href="classes/databaseHomepage.html">Database Programming</a></li>
             </ul>
         </div>
+
+        <div>
+            <div class="regBox">
+                <p>Registration</p>
+                <hr>
+                <p>Search: </p>
+                <input id="profUpdate" type="text" name="update" style="margin-left: 10px; height: 20px; width: 270px">
+                <br>
+                <div style="height:120px;width:300px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+                    <a class="classLinksCourses" id="acc" onclick="acc()">Accounting Principles I</a> <br>
+                    <a class="classLinksCourses" id="rela" onclick="rela()">Intercultural Relationships</a>
+                    <br>
+                    <a class="classLinksCourses" id="civ" onclick="civ()">World Civilization</a>
+                     <br>
+                    <a class="classLinksCourses" id="mat" onclick="mat()">Contemporary Mathematics</a>
+                     <br>
+                    <a class="classLinksCourses" id="psy" onclick="psy()">General Psychology</a>
+                     <br>
+                    <a class="classLinksCourses" id="bus" onclick="bus()">Foundations of Business</a>
+                     <br>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function acc() {
+                var color = document.getElementById('acc').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('acc').style.color = "#000000";
+                }
+                    document.getElementById('acc').style.color = "#cfebfd";
+                }  
+
+                function rela() {
+                var color = document.getElementById('rela').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('rela').style.color = "#000000";
+                }
+                    document.getElementById('rela').style.color = "#cfebfd";
+                } 
+
+                function civ() {
+                var color = document.getElementById('civ').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('civ').style.color = "#000000";
+                }
+                    document.getElementById('civ').style.color = "#cfebfd";
+                } 
+
+                function mat() {
+                var color = document.getElementById('mat').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('mat').style.color = "#000000";
+                }
+                    document.getElementById('mat').style.color = "#cfebfd";
+                } 
+
+                function psy() {
+                var color = document.getElementById('psy').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('psy').style.color = "#000000";
+                }
+                    document.getElementById('psy').style.color = "#cfebfd";
+                } 
+
+                function bus() {
+                var color = document.getElementById('bus').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('bus').style.color = "#000000";
+                }
+                    document.getElementById('bus').style.color = "#cfebfd";
+                } 
+        </script>
+
     </body>
 </html>

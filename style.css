@@ -134,13 +134,7 @@ ul{
     background-color: #cfebfd;
 }
 
-.addUpdate{
-    padding: 7px;
-    width: 80px;
-    height: 50px;
-    float: left;
-    margin-left:40px;
-}
+
 
 .addUpdateButton{
     border-radius: 3px;
@@ -240,6 +234,12 @@ ul{
     color: #353535;
     height: 100px;
     text-decoration: none;
+}
+
+.mystyle{
+    color: #000000;
+    height: 100px;
+    text-decoration: none; 
 }
 
 .classLinksCourses:hover{
@@ -369,5 +369,24 @@ ul{
     height: 150px;
     z-index: 15;
     margin: 180px 0 0 50px;
-    padding-top: 10px;
+    padding: 7px;
+    float: left;
+    margin-left:40px;
+}
+
+.regBox{
+    border-radius: 3px;
+    border: thin solid #353535;
+    box-shadow: 0 3px 12px #5C666B;
+    background-color: #C0C0C1;
+    font-weight: bold;
+    color: #353535;
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    z-index: 15;
+    margin: 180px 0 0 50px;
+    padding: 7px;
+    float: left;
+    margin-left:40px;
 }
