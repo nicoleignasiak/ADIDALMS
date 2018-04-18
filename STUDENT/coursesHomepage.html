@@ -68,15 +68,15 @@
                 <br>
                 <div style="height:120px;width:300px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
                     <a class="classLinksCourses" id="acc" onclick="acc()">Accounting Principles I</a> <br>
-                    <a class="classLinksCourses" id="int" >Intercultural Relationships</a>
+                    <a class="classLinksCourses" id="rela" onclick="rela()">Intercultural Relationships</a>
                     <br>
-                    <a class="classLinksCourses" id="civ">World Civilization</a>
+                    <a class="classLinksCourses" id="civ" onclick="civ()">World Civilization</a>
                      <br>
-                    <a class="classLinksCourses" id="mat">Contemporary Mathematics</a>
+                    <a class="classLinksCourses" id="mat" onclick="mat()">Contemporary Mathematics</a>
                      <br>
-                    <a class="classLinksCourses" id="psy">General Psychology</a>
+                    <a class="classLinksCourses" id="psy" onclick="psy()">General Psychology</a>
                      <br>
-                    <a class="classLinksCourses" id="bus">Foundations of Business</a>
+                    <a class="classLinksCourses" id="bus" onclick="bus()">Foundations of Business</a>
                      <br>
                 </div>
             </div>
@@ -90,6 +90,46 @@
                 }
                     document.getElementById('acc').style.color = "#cfebfd";
                 }  
+
+                function rela() {
+                var color = document.getElementById('rela').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('rela').style.color = "#000000";
+                }
+                    document.getElementById('rela').style.color = "#cfebfd";
+                } 
+
+                function civ() {
+                var color = document.getElementById('civ').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('civ').style.color = "#000000";
+                }
+                    document.getElementById('civ').style.color = "#cfebfd";
+                } 
+
+                function mat() {
+                var color = document.getElementById('mat').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('mat').style.color = "#000000";
+                }
+                    document.getElementById('mat').style.color = "#cfebfd";
+                } 
+
+                function psy() {
+                var color = document.getElementById('psy').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('psy').style.color = "#000000";
+                }
+                    document.getElementById('psy').style.color = "#cfebfd";
+                } 
+
+                function bus() {
+                var color = document.getElementById('bus').style.color;
+                if (color == "#cfebfd"){
+                    document.getElementById('bus').style.color = "#000000";
+                }
+                    document.getElementById('bus').style.color = "#cfebfd";
+                } 
         </script>
 
     </body>
