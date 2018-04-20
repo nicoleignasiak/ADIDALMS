@@ -52,40 +52,7 @@ var matCount = 1;
 var psyCount = 1;
 var busCount = 1;
 
-function searchFor()
-{
-	foundWord = "";
-	searchFor = "";
-	searchFor = document.getElementById("searchFor").value;
-	searchFor = searchFor.toLowerCase();
-	for (i = 0; i < classes.length; i++){
-		if(classes[i] == searchFor){
-			foundWord = searchFor;
-		}
-	}
-	if(foundWord == ""){
-		document.getElementById("noneFound").innerHTML = "No match found.";
-	}else {
-		document.getElementById("regClasses").style.display = "none";
-		document.getElementById("addClasses").style.display = "none";
-		if((foundWord == "accounting") || (foundWord == "principles") || (foundWord == "i") || (foundWord == "accounting principles i")){
-		document.getElementById("foundClass").innerHTML = "Accouting Principles I";
-		}else if ((foundWord == "intercultural") || (foundWord == "relationships") || (foundWord == "intercultural relationships")){
-			document.getElementById("foundClass").innerHTML = "Intercultural Relationships";
-		}else if ((foundWord == "world") || (foundWord == "civilization") || (foundWord == "world civilization")){
-			document.getElementById("foundClass").innerHTML = "World Civilization";
-		}else if ((foundWord == "contemporary") || (foundWord == "mathematics") || (foundWord == "Contemporary Mathematics")){
-			document.getElementById("foundClass").innerHTML = "Contemporary Mathematics";
-		}else if ((foundWord == "General") || (foundWord == "psy") || (foundWord == "general psychology")){
-			document.getElementById("foundClass").innerHTML = "General Psychology";
-		}else if ((foundWord == "business") || (foundWord == "of") || (foundWord == "business") || (foundWord == "foundations of business")){
-			document.getElementById("foundClass").innerHTML = "Foundations of Business";
-		}else{
-			document.getElementById("noneFound").innerHTML = "No match found.";
-		}
-	}
-}
-
+//changes page to look different to drop a class
 function drop()
 {
 	document.getElementById("coursesList").style.display = "none";
@@ -115,15 +82,52 @@ function drop()
 	eleven.style.fontWeight = "bold";
 }
 
+//Search for a class
+function searchFor()
+{
+	foundWord = "";
+	searchFor = "";
+	searchFor = document.getElementById("searchFor").value;
+	searchFor = searchFor.toLowerCase();
+	for (i = 0; i < classes.length; i++){
+		if(classes[i] == searchFor){
+			foundWord = searchFor;
+		}
+	}
+	
+	if(foundWord == ""){
+		document.getElementById("noneFound").innerHTML = "No match found.";
+	}else if (foundWord !== "") {
+		document.getElementById("regClasses").style.display = "none";
+		document.getElementById("addClasses").style.display = "none";
+		if((foundWord == "accounting") || (foundWord == "principles") || (foundWord == "i") || (foundWord == "accounting principles i")){
+		document.getElementById("foundClass").innerHTML = "Accouting Principles I";
+		}else if ((foundWord == "intercultural") || (foundWord == "relationships") || (foundWord == "intercultural relationships")){
+			document.getElementById("foundClass").innerHTML = "Intercultural Relationships";
+		}else if ((foundWord == "world") || (foundWord == "civilization") || (foundWord == "world civilization")){
+			document.getElementById("foundClass").innerHTML = "World Civilization";
+		}else if ((foundWord == "contemporary") || (foundWord == "mathematics") || (foundWord == "Contemporary Mathematics")){
+			document.getElementById("foundClass").innerHTML = "Contemporary Mathematics";
+		}else if ((foundWord == "General") || (foundWord == "psy") || (foundWord == "general psychology")){
+			document.getElementById("foundClass").innerHTML = "General Psychology";
+		}else if ((foundWord == "business") || (foundWord == "of") || (foundWord == "business") || (foundWord == "foundations of business")){
+			document.getElementById("foundClass").innerHTML = "Foundations of Business";
+		}else{
+			document.getElementById("noneFound").innerHTML = "No match found.";
+		}
+	}
+}
+
+//goes back like you dropped a class
 function dropClasses()
 {
 	document.getElementById("coursesListDrop").style.display = "none";
 	document.getElementById("coursesList").style.display = "block";
 }
 
+//registers for a class
 function register()
-{
-	
+{	
 	if (accCount == 0){
 		document.getElementById("class1").innerHTML = "Accounting Principles I";
 		document.getElementById('class1').style.color = '#383838';
@@ -185,6 +189,7 @@ function register()
 	}
 }
 
+//hightlight
 function acc()
 {
 	color = document.getElementById('acc').style.color;
@@ -197,6 +202,7 @@ function acc()
 	}
 }
 
+//hightlight
 function rela()
 {
 	color = document.getElementById('rela').style.color;
@@ -209,6 +215,7 @@ function rela()
 	} 
 }
 
+//hightlight
 function civ()
 {
 	color = document.getElementById('civ').style.color;
@@ -221,6 +228,7 @@ function civ()
 	}
 }
 
+//hightlight
 function mat()
 {
 	color = document.getElementById('mat').style.color;
@@ -233,6 +241,7 @@ function mat()
 	} 
 }
 
+//hightlight
 function psy()
 {
 	color = document.getElementById('psy').style.color;
@@ -245,6 +254,7 @@ function psy()
 	}
 }
 
+//hightlight
 function bus()
 {
 	color = document.getElementById('bus').style.color;
@@ -257,6 +267,7 @@ function bus()
 	}
 }
 
+//upload syllabus
 function uploadOnChange()
 {
 	var filename = this.value;
