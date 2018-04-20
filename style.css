@@ -404,3 +404,11 @@ ul{
 .left{
     margin-left: 400px;
 }
+
+.dropClass{
+	border-radius: 3px;
+	border: thin solid #FFF;
+	font-weight:bold;
+	width: 200px;
+	height: 150px;
+}
