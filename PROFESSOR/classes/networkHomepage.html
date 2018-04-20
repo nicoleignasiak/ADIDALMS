@@ -19,12 +19,7 @@
         <link rel="stylesheet" type="text/css" href="../../style.css">
     </head>
     
-    <script>
-      function goBack() 
-      {
-        window.history.back();
-      }
-    </script>
+    <script type="text/javascript" src="scripting.js"></script>
 
     <body>
 
@@ -80,18 +75,5 @@
                 <input class="addUpdateButton" type="submit" value="Submit" style="position: absolute; bottom: 8px;right: 8px;" onclick="hide()">
             </div>
         </div>
-
-        <!-- script for updates -->
-        <script>
-            function show() {
-                document.getElementById('submitUpdate').style.display = "block";
-            }
-
-            function hide() {
-                document.getElementById('submitUpdate').style.display = "none";
-                var newUpdate = document.getElementById('profUpdate').value;
-                document.getElementById('update').innerHTML = newUpdate;
-            }
-        </script>
     </body>
 </html>

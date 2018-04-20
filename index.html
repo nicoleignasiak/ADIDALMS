@@ -23,28 +23,7 @@
     
   <body>
   
-    <!-- Scripting for username and password validation -->    
-    <script>
-      
-      function validate()
-        {
-          if(document.getElementById("username").value == "student" && document.getElementById("password").value == "pass")
-          {
-            location.href="student/coursesHomepage.html";
-          }
-          else if
-          (document.getElementById("username").value == "professor" && document.getElementById("password").value == "pass")
-          {
-            location.href="professor/coursesHomepage.html";
-          }
-          else
-          {
-            alert( "Username and/or Password are incorrect. Please enter in a valid Username and Password.");
-            location.href="index.html";
-          }
-        }
-        
-    </script>
+    <script type="text/javascript" src="scripting.js"></script>
     
     <div class="header">
       <!-- ADIDALMS logo at top left -->
@@ -66,7 +45,7 @@
             <input type="password" id="password" placeholder="password" required>
           </li>
           <li>
-            <input class="loginButtonIndex" type="button" value="Login"  onclick="validate();" >
+            <input class="loginButtonIndex" type="button" value="Login"  onclick="validate()" >
           </li>
         </ul>
       </form>
