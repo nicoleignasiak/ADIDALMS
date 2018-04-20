@@ -98,9 +98,9 @@ ul{
     width: 75px;
     display: flex;
     justify-content: center;
-    float: left;
-    margin-top: 10px;
-    margin-right: 20px;
+	float: right;
+    margin-right: 10px;
+	margin-top:10px;
 }
 
 .backButtonCourses:hover{
@@ -167,7 +167,7 @@ ul{
     justify-content: center;
     float: right;
     margin-top: 10px;
-    margin-right: 20px;
+	margin-right:10px;
 
 }
 
@@ -262,13 +262,14 @@ ul{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
-    background-color: #C0C0C1;
+    background-color: #D3G7H1;
     font-weight: bold;
     width: 80px;
     height: 50px;
     color: #353535;
-    margin: 20px;
-    margin-left: 40px;
+	float: left;
+	margin-top: 10px;
+    margin-left: 350px;
 }
 
 .syllabus:hover{
@@ -281,13 +282,14 @@ ul{
     border-radius: 3px;
     border: thin solid #353535;
     padding: 5px;
-    background-color: #C0C0C1;
+    background-color: #D3G7H1;
     font-weight: bold;
     width: 80px;
     height: 50px;
     color: #353535;
-    margin: 20px;
-    margin-left: 40px;
+	float: left;
+	margin-top: 10px;
+    margin-left: 20px;
 }
 
 .schedule:hover{
