@@ -18,14 +18,15 @@
         <title>Courses</title>
         <link rel="stylesheet" type="text/css" href="../../style.css">
     </head>
+    
+    <script>
+      function goBack() 
+      {
+        window.history.back();
+      }
+    </script>
 
     <body>
-        <script>
-            function DisableBackButton()
-            {
-                history.forward();
-            }
-        </script>
 
         <div class="header-wrapper">
             <div class="headerClass">
@@ -34,8 +35,7 @@
 
                 <!-- logout button -->
                 <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
-                  <input class="logoutButtonCourses" type="submit" value="Logout">
-                  <script>DisableBackButton();</script>
+                    <input class="logoutButtonCourses" type="submit" value="Logout">
                 </form>
 
                 <input class="studentName" type="submit" value="Professor 1">
@@ -47,6 +47,12 @@
 
         <!-- syllabus -->
         <div>
+        
+            <!-- back button -->
+            <form class="backFormCourses" name="backButton" method="get" accept-charset="utf-8">
+                <input class="backButtonCourses" type="button" value="Back" onclick="goBack()">
+            </form>
+            
             <form class="syllabusFormCourses" name="syllabus" action="tools/softwareSyllabus.html" method="get" accept-charset="utf-8">
                 <input class="syllabus" type="submit" value="Syllabus">
             </form> 

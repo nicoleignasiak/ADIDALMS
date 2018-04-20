@@ -20,12 +20,13 @@
         <link rel="stylesheet" type="text/css" href="../../style.css">
     </head>
 
-        <body>
+    <body>
+    
         <script>
-            function DisableBackButton()
-                {
-                    history.forward();
-                }
+          function goBack() 
+          {
+            history.back();
+          }
         </script>
     
         <div class="header-wrapper">
@@ -36,7 +37,6 @@
                 <!-- logout button -->
                 <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
                   <input class="logoutButtonCourses" type="submit" value="Logout">
-                  <script>DisableBackButton();</script>
                 </form>
 
                 <input class="studentName" type="submit" value="Student 1">
@@ -48,6 +48,12 @@
 
         <!-- syllabus -->
         <div>
+        
+            <!-- back button -->
+            <form class="backFormCourses" name="backButton" method="get" accept-charset="utf-8">
+                <input class="backButtonCourses" type="button" value="Back" onclick="goBack()">
+            </form>
+            
             <form class="syllabusFormCourses" name="syllabus" action="Syllabi/networkSyllabus.pdf" target="_blank" method="get" accept-charset="utf-8">
                 <input class="syllabus" type="submit" value="Syllabus">
             </form>

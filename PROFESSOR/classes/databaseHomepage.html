@@ -20,12 +20,6 @@
     </head>
 
     <body>
-        <script>
-            function DisableBackButton()
-            {
-                history.forward();
-            }
-        </script>
 
         <script>
           function goBack() 
@@ -41,7 +35,7 @@
                 
                 <!-- logout button -->
                 <form class="logoutFormCourses" name="signOut" action="../../index.html" method="get" accept-charset="utf-8">
-                  <input class="logoutButtonCourses" type="submit" value="Logout">
+                    <input class="logoutButtonCourses" type="submit" value="Logout">
                 </form>
 
                 <input class="studentName" type="submit" value="Professor 1">
@@ -54,8 +48,8 @@
         <!-- syllabus -->
         <div>
             <!-- back button -->
-            <form class="backFormCourses" name="backButton" method="get" onclick="goBack()" accept-charset="utf-8">
-              <input class="backButtonCourses" type="submit" value="Back">
+            <form class="backFormCourses" name="backButton" method="get" accept-charset="utf-8">
+                <input class="backButtonCourses" type="button" value="Back" onclick="goBack()">
             </form>
             
             <form class="syllabusFormCourses" name="syllabus" action="tools/databaseSyllabus.html" method="get" accept-charset="utf-8">

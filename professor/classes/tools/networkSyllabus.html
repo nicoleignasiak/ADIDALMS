@@ -19,14 +19,15 @@
         <link rel="stylesheet" type="text/css" href="../../../style.css">
         <script type="text/javascript" src="pdf.js"></script>
     </head>
+    
+    <script>
+      function goBack() 
+      {
+        window.history.back();
+      }
+    </script>
 
     <body>
-        <script language="javascript">
-            function DisableBackButton()
-            {
-                history.forward();
-            }
-        </script>
 
         <div class="header-wrapper">
             <div class="headerClass">
@@ -51,6 +52,11 @@
             <input id="filename" type="submit" value = "No Syllabus"/>
             <p id="successSyl"></p>
         </div>
+        
+        <!-- back button -->
+        <form class="backFormCourses" name="backButton" method="get" accept-charset="utf-8">
+          <input class="backButtonCourses" type="button" value="Back" onclick="goBack()">
+        </form>
 
         <script>
             document.getElementById('upload').onchange = uploadOnChange;
