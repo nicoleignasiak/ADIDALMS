@@ -134,8 +134,6 @@ ul{
     background-color: #cfebfd;
 }
 
-
-
 .addUpdateButton{
     border-radius: 3px;
     border: thin solid #353535;
@@ -186,6 +184,19 @@ ul{
     font-size: 110%;
 }
 
+.coursesListDrop{
+    background-color: #C0C0C1;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;\
+}
+
+.coursesListDrop h1{
+    bottom: 7px;
+    margin: 10px;
+    font-size: 110%;
+}
+
 .header{
     float: left;
     height: 120px;
@@ -228,7 +239,6 @@ ul{
     margin-left: 120px;
     font-size: 110%;
 }
-
 
 .classLinksCourses{
     color: #353535;
@@ -383,10 +393,18 @@ ul{
     color: #353535;
     position: absolute;
     width: 500px;
-    height: 200px;
+    height: 220px;
     z-index: 15;
     margin: 180px 0 0 50px;
     padding: 7px;
     float: left;
     margin-left:40px;
 }
+
+.left{
+    margin-left: 400px;
+}
+
+
+
+

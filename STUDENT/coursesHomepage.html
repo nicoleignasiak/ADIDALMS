@@ -48,7 +48,7 @@
         <hr>
         
         <!-- List of class names-->
-        <div class="coursesList">
+        <div class="coursesList" id="coursesList">
             <h1>Students's Course List</h1>
             <ul>
                 <li><a class="classLinksCourses" href="classes/softwareHomepage.html">Intro to Software Engineering</a></li>
@@ -56,17 +56,46 @@
                 <li><a class="classLinksCourses" href="classes/networkHomepage.html">Computer Network Fundamentals</a></li>
                 <li><a class="classLinksCourses" href="classes/literatureHomepage.html">Humanities World Literature</a></li>
                 <li><a class="classLinksCourses" href="classes/databaseHomepage.html">Database Programming</a></li>
+                <li><a class="classLinksCourses" id="class1"></a></li>
+                <li><a class="classLinksCourses" id="class2"></a></li>
+                <li><a class="classLinksCourses" id="class3"></a></li>
+                <li><a class="classLinksCourses" id="class4"></a></li>
+                <li><a class="classLinksCourses" id="class5"></a></li>
+                <li><a class="classLinksCourses" id="class6"></a></li>
             </ul>
+            <button type="button" onclick="drop();"> Drop a Class </button>
+        </div>
+
+        <div class="coursesListDrop" id="coursesListDrop" style="display: none">
+            <h1>Choose a class to drop: </h1>
+            <ul>
+                <li><a id="one" class="classLinksCourses" on>Intro to Software Engineering</a></li>
+                <li><a id="two" class="classLinksCourses">Accounting Principles II</a></li>
+                <li><a id="three" class="classLinksCourses">Computer Network Fundamentals</a></li>
+                <li><a id="four" class="classLinksCourses">Humanities World Literature</a></li>
+                <li><a id="five" class="classLinksCourses">Database Programming</a></li>
+                <li><a id="six" class="classLinksCourses" id="class1Drop"></a></li>
+                <li><a id="seven" class="classLinksCourses" id="class2Drop"></a></li>
+                <li><a id="eight" class="classLinksCourses" id="class3Drop"></a></li>
+                <li><a id="nine" class="classLinksCourses" id="class4Drop"></a></li>
+                <li><a id="ten" class="classLinksCourses" id="class5Drop"></a></li>
+                <li><a id="eleven" class="classLinksCourses" id="class6Drop"></a></li>
+            </ul>
+            <button type="button" onclick="dropClasses();">Drop Class(es)</button>
         </div>
 
         <div>
             <div class="regBox">
                 <p>Registration</p>
                 <hr>
-                <p>Search: </p>
-                <input id="profUpdate" type="text" name="update" style="margin-left: 10px; height: 20px; width: 270px">
-                <br>
-                <div style="height:120px;width:300px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+                <span>Search for a class: </span>
+                <input id="searchFor" type="text" name="searchFor" style="margin-left: 10px; height: 20px; width: 270px">
+                <button type="button" onclick="searchFor();"> Search </button>                
+                <div id="noneFound"></div>
+                <span>Click on a class to register:</span>
+                <div id="foundClass"></div>
+                <div style="height:120px;width:300px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="regClasses">
+
                     <a class="classLinksCourses" id="acc" onclick="acc()">Accounting Principles I</a> <br>
                     <a class="classLinksCourses" id="rela" onclick="rela()">Intercultural Relationships</a>
                     <br>
@@ -79,57 +108,220 @@
                     <a class="classLinksCourses" id="bus" onclick="bus()">Foundations of Business</a>
                      <br>
                 </div>
+                <span class="left" id="addClasses"><button type="button" onclick="register();"> Add Class(es) </button></span>
+
             </div>
         </div>
 
         <script>
+            var classes = ["accounting", "principles", "i", "intercultural", "relationships", "world", "civilization", "contemporary", "mathematics", "general", "psychology", "foundations", "of", "business", "accounting principles i", "intercultural relationships", "world civilization", "contemporary mathematics", "general psychology", "foundations of business"];
+            var search;
+            var searchFor;
+            var color;
+            var n;
+            var i;
+            var foundWord = "";
+            var accCount = 1;
+            var relaCount = 1;
+            var civCount = 1;
+            var matCount = 1;
+            var psyCount = 1;
+            var busCount = 1;
+
+            function searchFor(){
+                foundWord = "";
+                searchFor = "";
+                searchFor = document.getElementById("searchFor").value;
+                searchFor = searchFor.toLowerCase();
+                for (i = 0; i < classes.length; i++){
+                    if(classes[i] == searchFor){
+                        foundWord = searchFor;
+                    }
+                }
+                if(foundWord == ""){
+                    document.getElementById("noneFound").innerHTML = "No match found.";
+                }else{
+                    document.getElementById("regClasses").style.display = "none";
+                    document.getElementById("addClasses").style.display = "none";
+                    if((foundWord == "accounting") || (foundWord == "principles") || (foundWord == "i") || (foundWord == "accounting principles i")){
+                    document.getElementById("foundClass").innerHTML = "Accouting Principles I";
+                    }else if ((foundWord == "intercultural") || (foundWord == "relationships") || (foundWord == "intercultural relationships")){
+                        document.getElementById("foundClass").innerHTML = "Intercultural Relationships";
+                    }else if ((foundWord == "world") || (foundWord == "civilization") || (foundWord == "world civilization")){
+                        document.getElementById("foundClass").innerHTML = "World Civilization";
+                    }else if ((foundWord == "contemporary") || (foundWord == "mathematics") || (foundWord == "Contemporary Mathematics")){
+                        document.getElementById("foundClass").innerHTML = "Contemporary Mathematics";
+                    }else if ((foundWord == "General") || (foundWord == "psy") || (foundWord == "general psychology")){
+                        document.getElementById("foundClass").innerHTML = "General Psychology";
+                    }else if ((foundWord == "business") || (foundWord == "of") || (foundWord == "business") || (foundWord == "foundations of business")){
+                        document.getElementById("foundClass").innerHTML = "Foundations of Business";
+                    }else{
+                        document.getElementById("noneFound").innerHTML = "No match found.";
+                    }
+                }
+            }
+
+            function drop() {
+                document.getElementById("coursesList").style.display = "none";
+                document.getElementById("coursesListDrop").style.display = "block";
+                var one = document.getElementById("one");
+                var two = document.getElementById("two");
+                var three = document.getElementById("three");
+                var four = document.getElementById("four");
+                var five = document.getElementById("five");
+                var six = document.getElementById("six");
+                var seven = document.getElementById("seven");
+                var eight = document.getElementById("eight");
+                var nine = document.getElementById("nine");
+                var ten = document.getElementById("ten");
+                var eleven = document.getElementById("eleven");
+
+                one.style.fontWeight = "bold";
+                two.style.fontWeight = "bold";
+                three.style.fontWeight = "bold";
+                four.style.fontWeight = "bold";
+                five.style.fontWeight = "bold";
+                six.style.fontWeight = "bold";
+                seven.style.fontWeight = "bold";
+                eight.style.fontWeight = "bold";
+                nine.style.fontWeight = "bold";
+                ten.style.fontWeight = "bold";
+                eleven.style.fontWeight = "bold";
+            }
+
+            function dropClasses() {
+                document.getElementById("coursesListDrop").style.display = "none";
+                document.getElementById("coursesList").style.display = "block";
+            }
+
+            function register() {
+                
+                if (accCount == 0){
+                    document.getElementById("class1").innerHTML = "Accounting Principles I";
+                    document.getElementById('class1').style.color = '#383838';
+                    document.getElementById('acc').style.color = '#383838';
+
+                    document.getElementById("six").innerHTML = "Accounting Principles I";
+                    document.getElementById('six').style.color = '#383838';
+                    accCount = 1;
+                }
+
+                if (psyCount == 0){
+                    document.getElementById('class2').innerHTML = "General Psychology";
+                    document.getElementById('class2').style.color = '#383838';
+                    document.getElementById('psy').style.color = '#383838';
+
+                    document.getElementById('seven').innerHTML = "General Psychology";
+                    document.getElementById('seven').style.color = '#383838';
+                    psyCount = 1;
+                }
+
+                if (busCount == 0){
+                    document.getElementById('class3').innerHTML = "Foundations of Business";
+                    document.getElementById('class3').style.color = '#383838';
+                    document.getElementById('bus').style.color = '#383838';
+
+                    document.getElementById('eight').innerHTML = "Foundations of Business";
+                    document.getElementById('eight').style.color = '#383838';
+                    busCount = 1;
+                }
+
+                if (matCount == 0){
+                    document.getElementById('class4').innerHTML = "Contemporary Mathematics";
+                    document.getElementById('class4').style.color = '#383838';
+                    document.getElementById('mat').style.color = '#383838';
+
+                    document.getElementById('nine').innerHTML = "Contemporary Mathematics";
+                    document.getElementById('nine').style.color = '#383838';
+                    matCount = 1;
+                }
+
+                if (relaCount == 0){
+                    document.getElementById('class5').innerHTML = "Intercultural Relationships";
+                    document.getElementById('class5').style.color = '#383838';
+                    document.getElementById('rela').style.color = '#383838';
+
+                    document.getElementById('ten').innerHTML = "Intercultural Relationships";
+                    document.getElementById('ten').style.color = '#383838';
+                    relaCount = 1;
+                }
+
+                if (civCount == 0){
+                    document.getElementById('class6').innerHTML = "World Civilization";
+                    document.getElementById('class6').style.color = '#383838';
+                    document.getElementById('civ').style.color = '#383838';
+
+                    document.getElementById('eleven').innerHTML = "World Civilization";
+                    document.getElementById('eleven').style.color = '#383838';
+                    civCount = 1;
+                }
+            }
+
             function acc() {
-                var color = document.getElementById('acc').style.color;
-                if (color == "#cfebfd"){
-                    document.getElementById('acc').style.color = "#000000";
+                color = document.getElementById('acc').style.color;
+                if (accCount == 0){
+                    document.getElementById('acc').style.color = '#383838';
+                    accCount = 1;
+                }else{
+                    document.getElementById('acc').style.color = '#cfebfd';
+                    accCount = 0;
                 }
-                    document.getElementById('acc').style.color = "#cfebfd";
-                }  
+            }
 
-                function rela() {
-                var color = document.getElementById('rela').style.color;
-                if (color == "#cfebfd"){
-                    document.getElementById('rela').style.color = "#000000";
-                }
+            function rela() {
+                color = document.getElementById('rela').style.color;
+                if (relaCount == 0){
+                    document.getElementById('rela').style.color = '#383838';
+                    relaCount = 1;
+                }else{
                     document.getElementById('rela').style.color = "#cfebfd";
+                    relaCount = 0;
                 } 
+            }
 
-                function civ() {
-                var color = document.getElementById('civ').style.color;
-                if (color == "#cfebfd"){
-                    document.getElementById('civ').style.color = "#000000";
-                }
+            function civ() {
+                color = document.getElementById('civ').style.color;
+                if (civCount == 0){
+                    document.getElementById('civ').style.color = '#383838';
+                    civCount = 1;
+                }else{
                     document.getElementById('civ').style.color = "#cfebfd";
-                } 
-
-                function mat() {
-                var color = document.getElementById('mat').style.color;
-                if (color == "#cfebfd"){
-                    document.getElementById('mat').style.color = "#000000";
+                    civCount = 0;
                 }
+            }
+
+            function mat() {
+                color = document.getElementById('mat').style.color;
+                if (matCount == 0){
+                    document.getElementById('mat').style.color = '#383838';
+                    matCount = 1;
+                }else{
                     document.getElementById('mat').style.color = "#cfebfd";
+                    matCount = 0;
                 } 
+            }
 
-                function psy() {
-                var color = document.getElementById('psy').style.color;
-                if (color == "#cfebfd"){
-                    document.getElementById('psy').style.color = "#000000";
-                }
+            function psy() {
+                color = document.getElementById('psy').style.color;
+                if (psyCount == 0){
+                    document.getElementById('psy').style.color = '#383838';
+                    psyCount = 1;
+                }else{
                     document.getElementById('psy').style.color = "#cfebfd";
-                } 
-
-                function bus() {
-                var color = document.getElementById('bus').style.color;
-                if (color == "#cfebfd"){
-                    document.getElementById('bus').style.color = "#000000";
+                    psyCount = 0;
                 }
+            }
+
+            function bus() {
+                color = document.getElementById('bus').style.color;
+                if (busCount == 0){
+                    document.getElementById('bus').style.color = '#383838';
+                    busCount = 1;
+                }else{
                     document.getElementById('bus').style.color = "#cfebfd";
-                } 
+                    busCount = 0;
+                }
+            }
         </script>
 
     </body>
