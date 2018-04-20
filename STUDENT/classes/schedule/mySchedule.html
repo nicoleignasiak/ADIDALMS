@@ -20,11 +20,12 @@
     </head>
 
     <body>
+    
         <script>
-            function DisableBackButton()
-                {
-                    history.forward();
-                }
+          function goBack() 
+          {
+            history.back();
+          }
         </script>
     
         <div class="header-wrapper">
@@ -43,7 +44,12 @@
                 <h1>Indiana Wesleyan University</h1>
                 <h2>Student Schedule</h2>
             </div>
-        </div> 
+        </div>
+        
+        <!-- back button -->
+        <form class="backFormCourses" name="backButton" method="get" accept-charset="utf-8">
+          <input class="backButtonCourses" type="button" value="Back" onclick="goBack()">
+        </form> 
 
         <hr>
         
