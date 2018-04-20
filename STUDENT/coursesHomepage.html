@@ -21,6 +21,8 @@
 
     <body>
     
+        <script type="text/javascript" src="../scripting.js"></script>
+    
         <div class="header-wrapper">
             <div class="headerClass">
                 <!-- ADIDALMS logo at top left -->
@@ -56,7 +58,7 @@
                 <li><a class="classLinksCourses" id="class5"></a></li>
                 <li><a class="classLinksCourses" id="class6"></a></li>
             </ul>
-            <button type="button" onclick="drop();"> Drop a Class </button>
+            <button type="button" onclick="drop()"> Drop a Class </button>
         </div>
 
         <div class="coursesListDrop" id="coursesListDrop" style="display: none">
@@ -74,7 +76,7 @@
                 <li><a id="ten" class="classLinksCourses" id="class5Drop"></a></li>
                 <li><a id="eleven" class="classLinksCourses" id="class6Drop"></a></li>
             </ul>
-            <button type="button" onclick="dropClasses();">Drop Class(es)</button>
+            <button type="button" onclick="dropClasses()">Drop Class(es)</button>
         </div>
 
         <div>
@@ -83,7 +85,7 @@
                 <hr>
                 <span>Search for a class: </span>
                 <input id="searchFor" type="text" name="searchFor" style="margin-left: 10px; height: 20px; width: 270px">
-                <button type="button" onclick="searchFor();"> Search </button>                
+                <button type="button" onclick="searchFor()"> Search </button>                
                 <div id="noneFound"></div>
                 <span>Click on a class to register:</span>
                 <div id="foundClass"></div>
@@ -106,6 +108,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <script>
             var classes = ["accounting", "principles", "i", "intercultural", "relationships", "world", "civilization", "contemporary", "mathematics", "general", "psychology", "foundations", "of", "business", "accounting principles i", "intercultural relationships", "world civilization", "contemporary mathematics", "general psychology", "foundations of business"];
             var search;
@@ -317,5 +320,7 @@
             }
         </script>
 
+=======
+>>>>>>> e45356abf5bc5298856cd2dc71af44315475c472
     </body>
 </html>
