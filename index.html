@@ -21,7 +21,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
-  <body>
+  <!-- Scripting for not being able to go back once you have logged out -->
+  <script>
+  
+    function disableBack()
+    {
+        window.history.forward();
+    }
+  </script>
+    
+  <body onload="disableBack()">
   
     <!-- Scripting for username and password validation -->    
     <script>
